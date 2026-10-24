@@ -1,0 +1,12 @@
+scenario,protocol,cache_ms,server_ip,client_ip,interface,ping_rtt_ms,observation,screenshot
+baseline,http,1000,,,,,,
+delay100,http,1000,,,,,,
+delay100_lowcache,http,0,,,,,,
+jitter,http,0,,,,,,
+jitter-corr,http,0,,,,,,
+loss01,http,0,,,,,,
+loss5,http,0,,,,,,
+loss-corr,http,0,,,,,,
+duplicate1,http,0,,,,,,
+corrupt01,http,0,,,,,,
+reorder,http,0,,,,,,

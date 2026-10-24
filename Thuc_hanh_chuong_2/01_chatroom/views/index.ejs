@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat room - Hệ phân tán chương 2</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/chat.js"></script>
+</head>
+<body data-stage="<%= stage %>">
+<main>
+  <h1>Chat room môn Hệ phân tán</h1>
+  <p id="status" role="status">Đang kết nối...</p>
+  <form id="username-form">
+    <label for="username">Tên của bạn</label>
+    <input id="username" maxlength="30" placeholder="Anonymous" autocomplete="nickname">
+    <button type="submit">Đổi tên</button>
+  </form>
+  <section id="chatroom" aria-label="Tin nhắn" aria-live="polite"></section>
+  <p id="feedback" aria-live="polite"></p>
+  <form id="message-form">
+    <label for="message">Tin nhắn</label>
+    <input id="message" maxlength="1000" placeholder="Nhập tin nhắn..." autocomplete="off" required>
+    <button type="submit">Gửi</button>
+  </form>
+  <p id="error" role="alert"></p>
+  <small>Mở hai tab hoặc hai cửa sổ, đặt hai tên khác nhau rồi thử chat.</small>
+</main>
+</body>
+</html>
